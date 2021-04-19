@@ -1,0 +1,676 @@
+html, body
+{
+    background-color: red;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#topo
+{
+    background-color: blue;
+    height: 6%;
+    display: flex;
+}
+
+#menu
+{
+    background-color: yellow;
+    width: 70%;
+    height: 100%;
+}
+
+#logo_box
+{
+    background-color: pink;
+    width: 30%;
+    height: 100%;
+    margin-right: 0px;
+}
+
+#logo
+{
+    background-color: orange;
+    width: 90%;
+    height: 84%;
+    margin-top: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formatacao
+{
+    display: inline-block;
+    margin-top: 4%;
+    margin-left: 4%;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+#meio
+{
+    background-color: purple;
+    height: 85%;
+    
+}
+
+#menu2
+{
+    background-color: blue;
+    position: fixed;
+
+    margin-top: 12%;
+}
+
+.formatacao2
+{
+    background-color: red;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    padding: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+.formatacao3
+{
+    font-weight: bolder;
+    font-size: 95%;
+}
+
+#meio1
+{
+    background-color: crimson;
+    display: flex;
+
+}
+
+#botao
+{
+    display: inline-block;
+    background-color: green;
+    width: 50px;
+    height: 50px;
+
+}
+
+#conteudo1
+{
+    display: inline-block;
+    background-color: red;
+    width: 70%;
+    margin-left: 5%;
+    font-size: 20px;    
+}
+
+#caixa_de_textos
+{
+    background-color: aqua;
+    width: 95%;
+    height: 34%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.texto_um
+{
+    background-color: azure;
+    width: 95%;
+    height: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.titulo_um
+{
+    background-color: blueviolet;
+    width: 98%;
+    height: 18%;    
+    margin: 1%;
+}
+
+.Sub_titulo_um
+{
+    background-color: blueviolet;
+    width: 98%;
+    height: 15%;    
+    margin: 1%;
+}
+
+.info_um
+{
+    background-color: blueviolet;
+    width: 98%;
+    height: 46%;    
+    margin: 1%;
+}
+
+.fonte_um
+{
+    background-color: blueviolet;
+    width: 98%;
+    height: 11%;    
+    margin: 1%;
+}
+
+#projetos
+{
+    margin-top: 1%;
+    background-color: aqua;
+    width: 95%;
+    height: 32%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.projeto_um
+{
+    background-color: azure;
+    width: 95%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;   
+}
+
+.imagem_um_um
+{
+    background-color: blueviolet;
+    width: 48%;
+    height: 96%;    
+    margin: 1% 0% 0% 1.2%;
+    display: inline-block;
+}
+
+.imagem_um_dois
+{
+    background-color: blueviolet;
+    width: 48%;
+    height: 96%;    
+    margin: 1% 0% 0% 0%;
+    display: inline-block;
+}
+
+#atividades
+{
+    margin-top: 1%;
+    background-color: aqua;
+    width: 95%;
+    height: 32%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.atividade
+{
+    background-color: azure;
+    width: 95%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button
+{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer; 
+    width: 98.7%; 
+}
+
+.button1 
+{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+  
+.button1:hover 
+{
+    background-color: #4CAF50;
+    color: white;
+}
+
+#indicados
+{
+    background-color: aqua;
+    width: 95%;
+    height: 32%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.indicado
+{
+    background-color: azure;
+    width: 95%;
+    /*height: 95%;*/
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1%;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img
+{
+    height: 50px;
+}
+
+#fim
+{
+    background-color: yellow;
+    width: 100%;
+    height: 10.6%;
+    margin-top: 1%;
+    display: flex;
+}
+
+#rodape2
+{
+    background-color: green;
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+}
+
+#rodape3
+{
+    background-color: blue;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+}
+
+#conteudo3
+{
+    background-color: azure;
+    width: 95%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.contatos
+{
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.contato
+{
+    background-color: blueviolet;
+    width: 47.5%;
+    height: 40%;
+    display: inline-block;
+    margin: 1% 0% 1% 1%;
+    font-weight: bolder;
+    font-size: 120%;
+    text-align: center;
+}
+
+#conteudo4
+{
+    background-color: blueviolet;
+    width: 95%;
+    height: 95%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+#caixa_da_qr_code
+{
+    background-color: white;
+    width: 80%;
+    height: 100%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qr_code
+{
+    background-color: red;
+    height: 50%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    font-weight: 900;
+    margin-top: 15%;
+
+}
+
+#logo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#frases_de_efeito_mobile
+{
+    background-color: hsl(122, 39%, 49%);
+    width: 100%;
+
+    height: 50px;
+}
+
+p
+{
+    text-align: center;
+    font-weight: 900;
+    font-size: 150%;
+    margin-top: 10px;
+}
+
+#menu2
+{
+    display: none;
+}
+
+@media only screen and (max-width:280px)
+{
+    body
+    {
+        background-color: orange;
+    }
+}
+
+@media only screen and (min-width:540px)
+{
+    body
+    {
+        background-color: green;
+    }
+}
+
+@media only screen and (min-width:768px)
+{
+    body
+    {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width:1024px)
+{
+    #topo
+    {
+        background-color: pink;
+        width: 100%;
+        height: 10%;
+    }
+    
+    #menu
+    {
+        background-color: pink;
+        width: 20%;
+        margin-right: 10%;
+    }
+    
+    #logo_box
+    {
+        background-color: pink;
+        width: 10%;
+        margin-left: 20%;
+    }
+    
+    #logo
+    {
+
+    }
+    
+    .formatacao
+    {
+        font-size: 22px;
+        margin-top: 8.5%;
+    }
+    
+    #meio
+    {
+        background-color: pink;
+        height: 85%;
+          
+    }
+    
+    #menu2
+    {
+
+    }
+    
+    .formatacao2
+    {
+
+    }
+    
+    #frases_de_impacto
+    {
+        background-color: pink;
+        width: 40%;
+    }
+
+    .formatacao3
+    {
+        background-color: pink;
+        font-size: 37px;
+        margin-top: 2.5%;
+    }
+    
+    #meio1
+    {
+        background-color: red;
+        display: flex;
+    }
+    
+    #botao
+    {
+    
+    }
+    
+    #conteudo1
+    {
+
+    }
+    
+    #caixa_de_textos
+    {
+        background-color: pink;
+        width: 40%;
+        height: 100%;
+    }
+    
+    .texto_um
+    {
+        background-color: azure;
+        margin-top: 2%;
+    }
+    
+    .titulo_um
+    {
+
+    }
+    
+    .Sub_titulo_um
+    {
+
+    }
+    
+    .info_um
+    {
+        background-color: blueviolet;
+        height: 51.5%;
+    }
+    
+    .fonte_um
+    {
+
+    }
+    
+    #projetos
+    {
+        margin-top: 1%;
+        background-color: aqua;
+        width: 95%;
+        height: 32%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    
+    }
+    
+    .projeto_um
+    {
+        background-color: azure;
+        width: 95%;
+        height: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;   
+    }
+    
+    .imagem_um_um
+    {
+
+    }
+    
+    .imagem_um_dois
+    {
+
+    }
+    
+    #atividades
+    {
+        display: none;
+    }
+    
+    .atividade
+    {
+
+    }
+    
+    .button
+    {
+
+    }
+    
+    .button1 
+    {
+
+    }
+      
+    .button1:hover 
+    {
+
+    }
+    
+    #indicados
+    {
+        display: none;
+    }
+    
+    .indicado
+    {
+
+    }
+    
+    img
+    {
+
+    }
+    
+    #fim
+    {
+        background-color: BLUE;
+        width: 100%;
+        height: 50%;
+        display: none;
+    }
+    
+    #rodape2
+    {
+
+    }
+    
+    #rodape3
+    {
+
+    }
+    
+    #conteudo3
+    {
+
+    }
+    
+    .contatos
+    {
+
+    }
+    
+    .contato
+    {
+
+    }
+    
+    #conteudo4
+    {
+
+    }
+    
+    #caixa_da_qr_code
+    {
+
+    }
+    
+    .qr_code
+    {
+    
+    }
+    
+    #logo img
+    {
+        
+    }
+    
+    p
+    {
+        
+    }
+    
+    #menu2
+    {
+
+    }
+    #rodape_pc
+    {
+        background-color: red;
+        height: 150px;
+        width: 150px;
+        
+    }
+}
