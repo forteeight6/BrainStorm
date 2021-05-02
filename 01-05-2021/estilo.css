@@ -1,0 +1,88 @@
+body, html
+{
+    width: 100%;
+    height: 100%;
+    background-color: red; 
+}
+
+#Arena_de_Cartas
+{
+    width: 99%;
+    height: 99%;
+    background-color: blue;
+}
+
+#decks_inimigo
+{
+    width: 100%;
+    height: 20%;
+    background-color: yellow;
+}
+
+#afavor
+{
+    width: 100%;
+    height: 20%;
+    background-color: yellow;
+}
+
+#decks_aliado
+{
+    width: 90%;
+    height: 100%;
+    background-color: rgb(128, 0, 107);
+    display: inline-block;
+}
+
+#seu_deck
+{
+    width: 9.5%;
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+}
+
+.deck_inimigo
+{
+    width: 9.5%;
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+    margin-left: 0.24%;
+}
+
+.deck_aliado
+{
+    width: 9.5%;
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+    margin-left: 1.2%;
+}
+
+#setar_cartas
+{
+    background-color: honeydew;
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.cartas
+{
+background-color: blue;
+width: 100%;
+height: 96.5%;
+margin-top: 0.5%;
+}
+
+.carta
+{
+    background-color: blueviolet;
+    width: 8%;
+    height: 20%;
+    margin-top: 1%;
+    margin-left: 0.775%;
+    display: inline-block;
+
+}
