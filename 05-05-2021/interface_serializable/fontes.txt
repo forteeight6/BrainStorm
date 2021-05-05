@@ -1,0 +1,5 @@
+https://www.php.net/manual/pt_BR/class.serializable.php
+
+https://www.php.net/manual/pt_BR/language.oop5.serialization.php
+
+https://www.php.net/manual/pt_BR/serializable.serialize.php

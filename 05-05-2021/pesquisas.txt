@@ -1,0 +1,10 @@
+https://imasters.com.br/back-end/melhores-arrays-orientados-a-objeto - 
+
+- implements, php - ok
+- Serializable, php - ok
+- Countable, php
+- ArrayAccess, php
+- IteratorAggregate, php
+- implements, php
+- ArrayIterator, php
+- ArrayObject, php

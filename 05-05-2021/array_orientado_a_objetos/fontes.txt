@@ -1,0 +1,5 @@
+https://imasters.com.br/back-end/melhores-arrays-orientados-a-objeto
+
+https://www.php.net/manual/pt_BR/language.oop5.interfaces.php
+
+https://www.php.net/manual/pt_BR/function.class-implements.php
