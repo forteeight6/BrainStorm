@@ -1,0 +1,11 @@
+Array Orientado A Objetos
+
+https://imasters.com.br/back-end/melhores-arrays-orientados-a-objeto#:~:text=O%20PHP%20tem%20duas%20classes,em%20cima%20de%20tudo%20isso.
+
+o que é spl_autoloader_register, php
+
+https://pt.stackoverflow.com/questions/88023/o-que-%C3%A9-spl-autoloader-register-em-php#:~:text=O%20spl_autoloader_register%20%C3%A9%20usado%20pelo,se%20usar%20o%20PSR%2D4.
+
+https://dev.to/phpbrasil/como-nao-desenvolver-em-php-c8h
+
+https://www.php.net/manual/pt_BR/function.spl-autoload-register.php
