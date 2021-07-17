@@ -1,0 +1,20 @@
+método leitura de Savoring
+
+*Introdução ao Slim
+
+Criação de Rotas
+
+*Configuração o Slim
+
+Vai ser necessario o Composer
+(Vai ser necessario aprender a usar o Composer)
+
+Metodo que recebe como parametro uma função
+
+$app->get('/sobre', function(){
+
+});
+//Isso me lembrou do javascript.
+
+Pesquisar sobre Design Patterns.
+
