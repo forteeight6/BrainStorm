@@ -16,7 +16,7 @@ Closure::fromCallable permite converter um Callable(função) em uma Closure. Pa
 
 --------------------------------------------------
 O que é um CallBack?
-R:
+R: Em programação de computadores, um método de callbak é uma rotina que é passada como parâmetro para outro método. É esperado então que o método execute o código do argumento em algum momento. A invocação do trecho pode ser imediata, como em um, ou em outro momento.
 
 ------------------------------------------------
 Partials functions são funções que pegam uma função existente e reduzem a quantidade de parâmetros ligando um ou mais de seus parâmetros a um valor específico, retornando uma outra função com esses parâmetros já definidos.
