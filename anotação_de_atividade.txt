@@ -1,0 +1,25 @@
+método leitura de Savoring
+
+Lambda functions/Closures são instancia da classe Closure, esta classe possui alguns métodos
+
+Closure::call
+
+Vincula a Closure temporiamente a um objeto/escopo e a chama com qualquer parâmetro passado.
+
+Closure::bindTo/Closure::bind
+
+Os métodos bindTo/bind retorna uma nova Closure com um objeto e um escopo vinculado, não é temporário, assim, se o objeto vinculado for alterado, o resultado da chamada da nova Closure poderá ter seu valor alterado também. Clojure::bind é uma versão static de Closure::bindTo.
+
+Closure::fromCallable
+
+Closure::fromCallable permite converter um Callable(função) em uma Closure. Para isso precisamos passar a função que queremos converter como parâmetro para esse método. Essa função verifica se o callable esta no escopo atual, se for do escopo externo vai lançar um erro.
+
+--------------------------------------------------
+O que é um CallBack?
+R:
+
+------------------------------------------------
+Partials functions são funções que pegam uma função existente e reduzem a quantidade de parâmetros ligando um ou mais de seus parâmetros a um valor específico, retornando uma outra função com esses parâmetros já definidos.
+
+Currying é uma técnica utilizada para transformar uma função que recebe multiplos parâmetros em uma cadeia de funções, cada uma lidando com apenas um parâmetro da função inicial.
+
