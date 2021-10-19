@@ -1,0 +1,1 @@
+1 - Crie uma função que copie um diretorio e a renomeie.
