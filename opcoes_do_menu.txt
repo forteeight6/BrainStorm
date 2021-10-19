@@ -1,0 +1,45 @@
+Comando Global Oculto '041': ADICIONA UMA NOVA CAMADA
+Comando Global Oculto '018': Escolhe um Exercicio Aleatorio de todos os niveis (Acessa um nivel de profundidade de forma aleatoria até chegar em um exercicio na última camada.)
+Comando Global Oculto '016': Acessa um nivel de profundidade de forma aleatoria até a próxima camada.
+
+1 - Lista de Exercicios
+
+	loop id + (Output dos nomes dos diretorios dessa camada)
+	1 - Materia: Matematica
+
+		loop id + (Output dos nomes dos diretorios dessa camada)
+		1 - Tópico: Matematica Basica
+
+			loop id + (Output dos nomes dos diretorios dessa camada)
+			1 - Tipo do Exercicio: Divisao
+
+				loop id + (Output dos nomes dos diretorios dessa camada)
+				1 - Selecionar Exercicio
+					1 - Titulo do Exercicio: Dividindo uma Pizza
+						1 - Adicionar Solução
+							1 - Entrada da solução
+							2 - Status da solução('Em Analise', 'Acertou', 'Errou')
+							3 - OPÇÃO X para parar de Adicionar Solução.
+
+						2 - Mostrar Lista de Solucoes;
+							1 - Solucao ref a data: 00/00/00
+							2 - Solucao ref a data: 01/00/00
+							3 - Solucao ref a data: 02/00/00
+							4 - Solucao ref a data: 03/00/00
+
+						3 - Estatisticas relacionada ao Exercicio
+							(Output da Primeira e última solução adicionada)
+							1 - Data Inicio
+							2 - Data Final
+				2 - Adicionar Exercicio
+					1 - Titulo do Exercicio
+					2 - Descrição do Exercicio
+					3 - Solução(Opcional)
+					4 - Opção X para parar de Adicionar Exercicio
+		
+2 - Lista de Comportamentos(Exemplos)
+
+
+
+
+
