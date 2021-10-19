@@ -1,0 +1,44 @@
+1 - Lista de Exercicios
+	1 - Biologia
+		1 - Biologia Basica
+			1 - Celulas
+			2 - Corpo Humano
+		2 - Biologia Intermediaria
+			1 - Cerebro
+			2 - Coração
+		3 - Biologia Avançada
+			1 - Pele
+			2 - Orgaos
+	2 - Fisica
+		1 - Fisica Basica
+		2 - Fisica Intermediaria
+		3 - Fisica Avançada
+	3 - Quimica
+		1 - Quimica Basica
+		2 - Quimica Intermediaria
+		3 - Quimica Avançada
+
+	4 - Matematica
+		1 - Matematica Basica
+		2 - Matematica Intermediaria
+		3 - Matematica Avançada
+	5 - Historia
+		1 - Historia Basica
+		2 - Historia Intermediaria
+		3 - Historia Avançada
+	6 - Portugues
+		1 - Portugues Basica
+		2 - Portugues Intermediaria
+		3 - Portugues Avançada
+	7 - Programação
+		1 - Java
+		2 - Python
+			1 - Orientacao a objetos
+			2 - Programacao Funcional
+				1 - Funcao Data e Hora
+				2 - Funcao New Diretorio
+			3 - Modulo PySimpleGui
+		3 - PHP
+
+
+2 - Lista de Comportamentos(Exemplos)
