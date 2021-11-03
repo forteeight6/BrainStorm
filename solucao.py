@@ -1,40 +1,21 @@
-# fonte: https://www.youtube.com/watch?v=FmEmlnvBcBw
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import pandas_datareader.data as web
+# diretorio_modelo = "nome_da_materia/topico_da_materia/tipo_do_exercicio/titulo_do_exercicio"
+# local_de_descricao = "descricoes/"
+# local_de_solucoes = "solucoes/"
+import os
+import random
+cronograma_modelo = 'cronograma_modelo.txt'
+"""
+dados = {
+    '04:00': ['Fazer Café da Manhã', 'Fazer Anki', 'Fazer Duolingo'],
+    '05:00': ['Voltar a dormir', 'Acordar 05:35', 'Levar Mozçao ao trabalho']
+}
+"""
+aleatorio = random.randint(1, 1000)
 
-# !pip install yfinance
-
-import yfinance as yf
-
-yf.pdr_override()
-
-ibov = web.get_data_yahoo('^BVSP')
-
-# print(ibov)
-
-ibov['Close'].plot()
-
-# print(ibov['Close'])
-
-ibov['Dif'] = ibov['Close'] - ibov['Open']
-
-# print(ibov['Dif'])
-
-df = ibov.sort_values(by=['Dif'], ascending=True)
-
-# print(df)
-# print(df[:10])
-
-google = web.get_data_yahoo('GOOG')
-
-google['Close'].plot()
-
-# print(google['Close'])
-
-# googleM = google.resample('M').max()
-
-googleM = google.resample('M').sum()
-
-print(googleM)
+arquivo = open(cronograma_modelo, 'a')
+arquivo.close()
+os.system(f"copy {cronograma_modelo} copias")
+arquivo = open(f"copias/{cronograma_modelo}", 'a')
+# arquivo.write(dados) Nãao funcionou pois é incompativel.
+arquivo.write(str(aleatorio))
+arquivo.close()
