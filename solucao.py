@@ -1,29 +1,51 @@
-from random import choice, shuffle
+# Crie uma função que toda vez que for executada salve um dado dentro de um arquivo .txt.
 
-# Insira uma lista de nomes, e a quantidade que deseja selecionar
+class flag:
+
+    def __init__(self):
+        self.file = open('flag.txt', 'r')
+        self.data = int(self.file.read().replace('\n', ''))
+
+    def add(self, num=1):
+        self.num = num
+        self.data += num
+
+        with open('flag.txt', 'w') as self.file:
+            self.file.write(f'{self.data}')
+        self.file = open('flag.txt', 'r')
+        self.data = int(self.file.read().replace('\n', ''))
+
+    def rmv(self, num2=1):
+        self.num2 = num2
+        self.data -= num2
+
+        with open('flag.txt', 'w') as self.file:
+            self.file.write(f'{self.data}')
+        self.file = open('flag.txt', 'r')
+        self.data = int(self.file.read().replace('\n', ''))
+
+    def status(self):
+        with open('flag.txt', 'r') as self.file:
+            return self.file.read()
 
 
-def selection(lista, quantidade):
-    escolhido = []
+flag = flag()
+# flag.add()
+flag.rmv()
+# Vou ter que salvar o valor atual da flag num arquivo flag.txt e recuperar esse valor sempre que requisitar um método.
 
-    for index in range(quantidade):
-        shuffle(lista)
-        escolhido.append(choice(lista))
+"""
+lista = [6]
 
-    return escolhido
-    # print(escolhido)
+flag = flag()
+for item in lista:
+    arquivo = open('WINZ21_21-10.txt', 'a')
 
-
-# selection(['a', 'b', 'c'], 2)
-
-alunos = []
-index = 0
-print('Insira X para finalizar o processo: \n')
-while True:
-    alunos.append(str(input('Qual o nome do alunos? ')))
-    if alunos[index].lower() == 'x':
-        break
-    index += 1
-
-for aluno in selection(alunos, 2):
-    print(f'{aluno}')
+    if flag.status() < 2:
+        arquivo.write(f'{item}, ')
+        flag.add()
+    else:
+        arquivo.write(f'\n')
+        arquivo.write(f'{item}, ')
+        flag.rmv()
+"""
