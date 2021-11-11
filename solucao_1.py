@@ -1,10 +1,9 @@
-from threading import Thread
+# Referencia:
+# https://youtu.be/KOvgRXZUWVw
+
+from multiprocessing import Process
 from random import shuffle, choice
 from time import sleep
-
-global var
-
-var = False
 
 
 def selection(lista, quantidade):
@@ -17,17 +16,25 @@ def selection(lista, quantidade):
                 if escolha not in escolhidos:
                     escolhidos.append(escolha)
                     break
-        if var:
-            break
         sleep(5)
         print(escolhidos)
         escolhidos.clear()
 
 
-lista = [1, 2, 3]
-# selection(lista, 2)
+if __name__ == '__main__':
 
-Thread(target=selection, args=(lista, 2, )).start()
+    lista = [1, 2, 3]
+    # selection(lista, 2)
 
-sleep(30)
-var = True
+    processo_1 = Process(target=selection, args=(lista, 2, ))
+
+    processo_2 = Process(target=selection, args=(lista, 1, ))
+
+    processo_1.start()
+    processo_2.start()
+
+    sleep(30)
+    processo_1.terminate()
+
+    sleep(30)
+    processo_2.terminate()
