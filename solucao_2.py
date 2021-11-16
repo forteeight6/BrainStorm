@@ -1,41 +1,35 @@
-# referencia:
-# https://stackoverflow.com/questions/10415028/how-can-i-recover-the-return-value-of-a-function-passed-to-multiprocessing-proce
+import solucao_1 as s1
 
-from multiprocessing import Process, Manager
-from random import shuffle, choice
-from time import sleep
+while True:
+    print('--Entre com 0 para escolher um padrão--')
+    print('--Entre com 1 para adicionar um padrão--')
+    print('--Entre com 2 para sair do menu--')
+    menu = int(input())
 
+    if menu == 0:
+        # s1.selecionar_padrao()
+        while True:
+            print('--Entre com 0 para selecionar o padrão por id--')
+            print('--Entre com 1 para selecionar o  padrão por nome--')
+            print('--Entre com 2 para listar os padrões--')
+            print('--Entre com 3 para voltar--')
+            sub_menu = int(input())
+            if sub_menu == 2:
+                s1.listar()
 
-def selection(lista, quantidade, return_list):
-    while True:
-        escolhidos = []
-        for a in range(quantidade):
-            shuffle(lista)
-            while True:
-                escolha = choice(lista)
-                if escolha not in escolhidos:
-                    escolhidos.append(escolha)
-                    return_list.append(escolha)
-                    break
-        sleep(5)
-        print(escolhidos)
-        escolhidos.clear()
+            if sub_menu == 0:
+                identificador = int(input('Digite o identificador: '))
+                s1.SelecionarPorId(identificador)
+            elif sub_menu == 1:
+                nome = str(input('Digite o nome: '))
+                s1.SelecionarPorNome(nome)
+            elif sub_menu == 3:
+                break
 
-
-if __name__ == '__main__':
-    manager = Manager()
-
-    return_list = manager.list()
-
-    lista = [1, 2, 3]
-
-    # selection(lista, 2)
-
-    processo_1 = Process(target=selection, args=(lista, 2, return_list, ))
-
-    processo_1.start()
-
-    sleep(30)
-    processo_1.terminate()
-
-    print(return_list)
+    elif menu == 1:
+        nome = input('(Opcional) Nomeie o padrao: ')
+        print('Exemplo: 5 8 9')
+        padrao = input()
+        s1.adicionar(nome, padrao)
+    elif menu == 2:
+        break
