@@ -1,24 +1,30 @@
-class SearchPattern:
-    def __init__(self, pattern, lista):
-        self.pattern = pattern
-        self.lista = lista
+# python -i solucao.py
+import matplotlib.pyplot as plt
+from matplotlib import animation
 
-    def run(self):
-        padrao = []
-        count = 1
-        for item in self.lista:
-            if item in self.pattern:
-                padrao.append(item)
-                if count == 4:
-                    print("Padrão encontrado:", padrao)
-                count += 1
-            else:
-                padrao.clear()
-                count = 1
+fig, ax = plt.subplots()
 
 
-grafico_padrao = [1, 2, 1, 2]
-grafico_teste = [1, 2, 1, 2, 4, 8, 16, 32, 1, 2, 1, 2, 1, 2]
+def animar(i):
+    dados = []
+    x = []
 
-teste = SearchPattern(grafico_padrao, grafico_teste)
-teste.run()
+    with open('padrao_setado.txt', 'r') as file:
+        dados = file.read()
+        dados = dados.replace("[", '')
+        dados = dados.replace("]", '')
+        dados = dados.split(',')
+
+        for item in dados:
+            x.append(item)
+            ax.clear()
+            ax.plot(x)
+
+
+ani = animation.FuncAnimation(fig, animar, interval=1000)
+
+ax.set_xlabel('Eixo x')
+
+plt.show()
+
+# animar()
