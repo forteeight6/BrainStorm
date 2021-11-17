@@ -1,58 +1,31 @@
-# python -i solucao.py
-import matplotlib.pyplot as plt
-from matplotlib import animation
-import modulo.solucao_3 as ms3
-from modulo.solucao_2 import SafePoint
-from multiprocessing import Process
+from threading import Thread
+from time import sleep
 
 
-def myOneProcess():
-    lista = [2, 5, 8]
-    while True:
+class Grafico:
 
-        num = ms3.selection(lista)
+    def __init__(self):
+        self.opcao = 1
+        if self.opcao == 1:
+            while True:
+                print('Fecha o grafico.')
+                sleep(5)
+        elif self.opcao == 2:
+            while True:
+                print('Abre o grafico.')
+                sleep(5)
 
-        safepoint = SafePoint(num)
-        safepoint.run()
+    def parar(self):
+        # super().Grafico.__init__(parar=2)
+        print('teste')
 
 
-if __name__ == '__main__':
-    processo_1 = Process(target=myOneProcess)
-    processo_1.start()
+obj = Grafico()
+thread = Thread(target=obj)
+thread.start()
 
-    fig, ax = plt.subplots()
 
-    def animar(i):
-        with open('modulo/WINZ21_21-10.txt', 'r') as f:
-            dados = f.read()
-
-        x = []
-        y = []
-
-        count = 0
-        for linha in dados.split('\n'):
-            if len(linha) == 0:
-                continue
-            for item in linha:
-                if ',' not in item:
-                    if count % 2 == 0:
-                        x.append(float(item))
-                        ax.clear()
-                        ax.plot(x)
-                    else:
-                        y.append(float(item))
-                        ax.clear()
-                        ax.plot(y)
-
-                    count += 1
-
-    ax.set_xlabel('Eixo x')
-
-    ani = animation.FuncAnimation(fig, animar, interval=2000)
-
-    plt.show()
-
-    print('Entre com 0 para finalizar o processo.')
-    opção = int(input())
-    if opção == 0:
-        processo_1.terminate()
+while True:
+    teste = int(input())
+    if teste == 5:
+        obj.opcao = 2
