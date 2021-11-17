@@ -1,57 +1,33 @@
-class Comparador:
-    def __init__(self, lista, pattern):
-        cont = 0
-        cont2 = 0
+# python -i solucao.py
+import matplotlib.pyplot as plt
+from matplotlib import animation
 
-        with open('indices.txt', 'a') as file:
-            while True:
-                status = lista[cont] == pattern[cont2]
+global fig, ax
 
-                if cont == len(lista) - 1:
-                    file.write(str(cont))
-                    file.write(') ')
-
-                    file.write(str(lista[cont]))
-                    file.write(' = ')
-                    file.write(str(pattern[cont2]))
-
-                    file.write(', ')
-                    file.write(str(status))
-
-                    file.write('\n')
-                    break
-                elif cont2 == len(pattern) - 1:
-                    file.write(str(cont))
-                    file.write(') ')
-
-                    file.write(str(lista[cont]))
-                    file.write(' = ')
-                    file.write(str(pattern[cont2]))
-
-                    file.write(', ')
-                    file.write(str(status))
-
-                    file.write('\n')
-                    cont2 = 0
-                    cont += 1
-                else:
-                    file.write(str(cont))
-                    file.write(') ')
-
-                    file.write(str(lista[cont]))
-                    file.write(' = ')
-                    file.write(str(pattern[cont2]))
-
-                    file.write(', ')
-                    file.write(str(status))
-
-                    file.write('\n')
-                    cont2 += 1
-                    cont += 1
+fig, ax = plt.subplots()
 
 
-lista = [1, 2, 3, 4, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 4, 8]
+def animar(i):
+    dados = []
+    x = []
 
-pattern = [1, 2, 3, 4]
+    with open('padrao_setado.txt', 'r') as file:
+        dados = file.read()
+        dados = dados.replace("[", '')
+        dados = dados.replace("]", '')
+        dados = dados.split(',')
 
-teste = Comparador(lista, pattern)
+        for item in dados:
+            x.append(item)
+            ax.clear()
+            ax.plot(x)
+
+
+def plotar():
+    ani = animation.FuncAnimation(fig, animar, interval=1000)
+
+    ax.set_xlabel('Eixo x')
+
+    plt.show()
+
+# animar()
