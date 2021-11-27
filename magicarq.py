@@ -7,11 +7,23 @@ from datetime import date
 
 
 class MagicArq:
-    def __init__(self, caminho='./', lista=[]):
+    def __init__(self, caminho='.', lista=[], data=False):
 
-        self.caminho = caminho
-        self.lista = lista
-        self.data_atual = str(date.today())
+        self.caminho = caminho + '/'
+        self.data_atual = str(date.today()) + '/'
+        self.lista = []
+        if data:
+            self.lista.append(self.data_atual)
+            for item in lista:
+                item = item + '/'
+                self.lista.append(item)
+        else:
+            for item in lista:
+                item = item + '/'
+                self.lista.append(item)
+
+        print(self.lista)
+
         self.novo_caminho = str()
         for item in self.lista:
             self.novo_caminho += f'{item}/'
@@ -86,10 +98,25 @@ class MagicArq:
                 break
             cont += 1
 
-    def ArqY(self):
-        pass
+    def ArqY(self, mais_destino=None):
+        cont = 0
+        self.mais_destino = mais_destino
+        while True:
+            if self.mais_destino != None:
+                self.caminho += self.mais_destino + self.lista[cont]
+            else:
+                self.caminho += self.lista[cont]
+
+            try:
+                os.mkdir(self.caminho)
+            except FileExistsError as e:
+                print(f"Pasta {self.caminho} já existe.")
+
+            if cont == len(self.lista) - 1:
+                break
+            cont += 1
 
 
 novo_caminho = ['teste10', 'teste11', 'teste12']
-teste = MagicArq('teste7/', lista=novo_caminho)
-teste.ArqX()
+teste = MagicArq('teste7', lista=novo_caminho, data=True)
+teste.ArqY()
