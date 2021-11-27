@@ -20,11 +20,19 @@ class MagicDoc:
     def __init__(self, arquivo):
         self.arquivo = arquivo
 
+        try:
+            with open(self.arquivo, 'r') as file:
+                self.array = np.array(file.read().split())
+            # print(self.array[-1])
+        except:
+            pass
+
     def LerDoc(self, formatLeitura, close=True, time=None, condicao=False):
         self.formatLeitura = formatLeitura
         self.arquivo = open(self.arquivo, 'r')
         if self.formatLeitura.lower() == 'json':
-            pass
+            toJson = js.load(self.arquivo)
+            return toJson
         elif self.formatLeitura.lower() == 'dict':
             pass
         elif self.formatLeitura.lower() == 'tuple':
@@ -34,41 +42,46 @@ class MagicDoc:
         elif self.formatLeitura.lower() == 'set':
             pass
         elif self.formatLeitura.lower() == 'array':
-            pass
+            toArray = np.array(self.arquivo.read().split())
+            return toArray
         elif self.formatLeitura.lower() == 'dataframe':
             pass
 
         if close:
             self.arquivo.close()
 
-    def EscreverDoc(self, formatEscrita, close=True, time=None, condicao=False):
+    def EscreverDoc(self, config, formatEscrita, close=True, time=None, condicao=False):
+        self.config = config
         self.formatEscrita = formatEscrita
+
         self.arquivo = open(self.arquivo, 'a')
+
         if self.formatEscrita.lower() == 'json':
-            pass
+            self.arquivo.write(self.config)
         elif self.formatEscrita.lower() == 'dict':
-            pass
+            js.dump(self.config, self.arquivo, indent=4)
         elif self.formatEscrita.lower() == 'tuple':
-            pass
+            self.arquivo.write(self.config)
         elif self.formatEscrita.lower() == 'list':
-            pass
+            self.arquivo.write(self.config)
         elif self.formatEscrita.lower() == 'set':
-            pass
+            self.arquivo.write(self.config)
         elif self.formatEscrita.lower() == 'array':
-            pass
+            self.arquivo.write(self.config)
         elif self.formatEscrita.lower() == 'dataframe':
-            pass
+            self.arquivo.write(self.config)
 
         if close:
             self.arquivo.close()
 
-    def SobrescreverDoc(self, formatSobrescrita, close=True, time=None, condicao=False):
+    def SobrescreverDoc(self, config, formatSobrescrita, close=True, time=None, condicao=False):
+        self.config = config
         self.formatSobrescrita = formatSobrescrita
         self.arquivo = open(self.arquivo, 'w')
         if self.formatSobrescrita.lower() == 'json':
             pass
         elif self.formatSobrescrita.lower() == 'dict':
-            pass
+            js.dump(self.config, self.arquivo, indent=4)
         elif self.formatSobrescrita.lower() == 'tuple':
             pass
         elif self.formatSobrescrita.lower() == 'list':
@@ -121,3 +134,15 @@ class MagicDoc:
     # Doc contendo valores atualizaveis ex:Longitude/Latitude que serão usado no mapa.
     def DocToMap(self, config=None, anima=False, thread=False, multiprocessing=False, manager=False, time=None, condicao=False):
         pass
+
+
+arquivo = 'arquivo.json'
+
+dados = {
+    'nome': 'Renato Lelis',
+    'profissao': 'Desenvolvedor de sistemas'
+}
+
+teste = MagicDoc(arquivo)
+# Mexer com o modificador
+teste.SobrescreverDoc(dados, 'dict')
