@@ -1,5 +1,3 @@
-import random
-
 class Analyzer:
 
 	def __init__(self, function_list, special='dropSearch'):
@@ -21,7 +19,8 @@ class Analyzer:
 		pass
 
 if __name__ == '__main__':
-
+	import random
+	
 	def pattern_1():
 		op = random.choice([True, False, False, False, False])
 		if op:
